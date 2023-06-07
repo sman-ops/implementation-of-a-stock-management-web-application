@@ -3,7 +3,9 @@ package com.spring.restaurant.model;
 import java.util.List;
 
 import javax.persistence.Column;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -19,13 +21,14 @@ import lombok.NoArgsConstructor;
 @Table(name="client")
 public class Client extends AbstractEntity {
 	
-	@Column(name = "nom")
+	 @Column(name = "nom")
 	  private String nom;
 
 	  @Column(name = "prenom")
 	  private String prenom;
 
-	 
+	  @Embedded
+	  private Adresse adresse;
 
 	  @Column(name = "photo")
 	  private String photo;
@@ -35,5 +38,8 @@ public class Client extends AbstractEntity {
 
 	  @Column(name = "numTel")
 	  private String numTel;
+	  
+	  @OneToMany(mappedBy = "client")
+	  private List<CommandeClient> commandeClients;
 
 }
