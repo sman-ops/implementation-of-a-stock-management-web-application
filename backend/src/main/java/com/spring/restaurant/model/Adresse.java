@@ -1,22 +1,26 @@
 package com.spring.restaurant.model;
 
+import java.io.Serializable;
+
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
 @Embeddable
-public class Adresse {
+public class Adresse implements Serializable {
 	
-	 @Column(name = "adresse1")
+	  @Column(name = "adresse1")
 	  private String adresse1;
 
 	  @Column(name = "adresse2")
@@ -30,6 +34,5 @@ public class Adresse {
 
 	  @Column(name = "pays")
 	  private String pays;
-
 
 }

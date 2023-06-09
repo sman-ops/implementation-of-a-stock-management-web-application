@@ -9,11 +9,13 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode(callSuper = true)
@@ -25,8 +27,12 @@ public class LigneVente extends AbstractEntity {
 	  @JoinColumn(name = "idvente")
 	  private Ventes vente;
 	  
+	  
 	  @Column(name = "quantite")
 	  private BigDecimal quantite;
+
+	  @Column(name = "prixunitaire")
+	  private BigDecimal prixUnitaire;
 
 
 }
