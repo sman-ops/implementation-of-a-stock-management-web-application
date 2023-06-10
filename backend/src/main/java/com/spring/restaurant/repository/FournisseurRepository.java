@@ -1,7 +1,12 @@
 package com.spring.restaurant.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface FournisseurRepository extends JpaRepository<>{
+import com.spring.restaurant.model.Fournisseur;
+
+
+@Repository
+public interface FournisseurRepository extends JpaRepository<Fournisseur, Integer> {
 
 }

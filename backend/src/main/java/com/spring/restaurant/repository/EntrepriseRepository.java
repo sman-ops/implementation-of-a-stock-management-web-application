@@ -1,7 +1,11 @@
 package com.spring.restaurant.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
-public interface EntrepriseRepository extends JpaRepository<>{
+import com.spring.restaurant.model.Entreprise;
+
+@Repository
+public interface EntrepriseRepository extends JpaRepository<Entreprise,Integer> {
 
 }
