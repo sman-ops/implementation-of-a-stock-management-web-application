@@ -29,5 +29,8 @@ public class Ventes extends AbstractEntity {
 
 	  @Column(name = "commentaire")
 	  private String commentaire;
+	  
+	  @Column(name = "identreprise")
+	  private Integer idEntreprise;
 
 }

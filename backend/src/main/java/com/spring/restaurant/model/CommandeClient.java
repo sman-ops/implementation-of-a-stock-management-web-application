@@ -32,7 +32,8 @@ public class CommandeClient extends AbstractEntity{
 	  @Column(name = "datecommande")
 	  private Instant dateCommande;
 
-	
+	  @Column(name = "identreprise")
+	  private Integer idEntreprise;
 	  
 	  
 	  @ManyToOne
