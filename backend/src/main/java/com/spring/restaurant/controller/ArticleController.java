@@ -13,7 +13,7 @@ import com.spring.restaurant.services.ArticleService;
 @RestController
 public class ArticleController implements ArticleApi {
 	
-	// Filed Injection  ( constructor and getters injection )
+	// Fieled Injection  ( constructor and setters injection )
 	@Autowired
 	private ArticleService articleService;
 
