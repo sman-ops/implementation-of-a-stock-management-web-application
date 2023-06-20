@@ -6,7 +6,7 @@ import com.spring.restaurant.model.LigneCommandeClient;
 
 import lombok.Builder;
 import lombok.Data;
-
+import com.fasterxml.jackson.annotation.JsonIgnore;
 @Builder
 @Data
 public class LigneCommandeClientDto {
@@ -15,6 +15,7 @@ public class LigneCommandeClientDto {
 	
 	  private ArticleDto article;
 	
+	  @JsonIgnore
 	  private CommandeClientDto commandeClient;
 
 	  private BigDecimal quantite;

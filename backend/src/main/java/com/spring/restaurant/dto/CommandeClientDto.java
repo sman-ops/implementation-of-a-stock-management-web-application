@@ -18,11 +18,10 @@ public class CommandeClientDto {
 
 	  private Instant dateCommande;
 
-
 	  private ClientDto client;
 
 	  private Integer idEntreprise;
-
+	  
 	  private List<LigneCommandeClientDto> ligneCommandeClients;
 	  
 	  public static CommandeClientDto fromEntity(CommandeClient commandeClient) {
