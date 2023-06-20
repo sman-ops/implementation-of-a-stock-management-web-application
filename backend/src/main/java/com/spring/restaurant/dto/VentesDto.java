@@ -19,8 +19,7 @@ public class VentesDto {
 	  private Instant dateVente;
 
 	  private String commentaire;
-
-	  
+ 
 	  private List<LigneVenteDto> ligneVentes;
 	  
 	  private Integer idEntreprise;
