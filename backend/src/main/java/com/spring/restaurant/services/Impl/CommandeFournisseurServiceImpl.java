@@ -33,7 +33,7 @@ import lombok.extern.slf4j.Slf4j;
 @Slf4j
 public class CommandeFournisseurServiceImpl implements CommandeFournisseurService {
 	
-	private CommandeFournisseurRepository commandeFournisseurRepository;
+   	  private CommandeFournisseurRepository commandeFournisseurRepository;
 	  private LigneCommandeFournisseurRepository ligneCommandeFournisseurRepository;
 	  private FournisseurRepository fournisseurRepository;
 	  private ArticleRepository articleRepository;

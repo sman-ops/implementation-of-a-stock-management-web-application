@@ -12,7 +12,7 @@ import lombok.Data;
 @Data
 public class VentesDto {
 	
-	 private Integer id;
+	  private Integer id;
 	
 	  private String code;
 
