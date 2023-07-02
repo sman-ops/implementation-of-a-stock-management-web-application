@@ -47,7 +47,7 @@ public class VentesServiceImpl implements VentesService {
 	@Override
 	public VentesDto save(VentesDto dto) {
 		
-		 List<String> errors = VentesValidator.validate(dto);
+		   List<String> errors = VentesValidator.validate(dto);
 		    if (!errors.isEmpty()) {
 		      log.error("Ventes n'est pas valide");
 		      throw new InvalidEntityException("L'objet vente n'est pas valide", ErrorCodes.VENTE_NOT_VALID, errors);
@@ -69,7 +69,7 @@ public class VentesServiceImpl implements VentesService {
 
 		    Ventes savedVentes = ventesRepository.save(VentesDto.toEntity(dto));
 
-		    dto.getLigneVentes().forEach(ligneVenteDto -> {
+		      dto.getLigneVentes().forEach(ligneVenteDto -> {
 		      LigneVente ligneVente = LigneVenteDto.toEntity(ligneVenteDto);
 		      ligneVente.setVente(savedVentes);
 		      ligneVenteRepository.save(ligneVente);
